@@ -1,0 +1,13 @@
+CREATE DATABASE IF NOT EXISTS smarttech_db;
+USE smarttech_db;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    nom VARCHAR(255) DEFAULT NULL,
+    prenom VARCHAR(255) DEFAULT NULL,
+    username VARCHAR(255) DEFAULT NULL,
+    role ENUM('employe', 'client') NOT NULL DEFAULT 'client',
+    email VARCHAR(255) DEFAULT NULL,
+    password VARCHAR(255) DEFAULT NULL,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
